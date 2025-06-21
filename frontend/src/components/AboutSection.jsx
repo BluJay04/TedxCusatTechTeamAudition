@@ -3,7 +3,7 @@ import { Star, Quote } from "lucide-react";
 import StatsGrid from "./StatsGrid";
 
 const AboutSection = ({ isVisible, stats }) => (
-  <section id="about" className="py-32 bg-gradient-to-b from-black via-gray-900/30 to-black relative">
+  <section id="about" className="py-24 bg-gradient-to-b from-black via-gray-900/30 to-black relative">
     <div className="container mx-auto px-6">
       <div className={`max-w-6xl mx-auto text-center transform transition-all duration-1000 ${isVisible.about ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
         <div className="relative mb-16">

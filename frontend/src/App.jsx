@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import CustomCursor from "./components/CustomCursor";
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
 import SpeakersCarousel from "./components/SpeakersCarousel";
@@ -115,13 +114,12 @@ const App = () => {
   const parallaxOffset = scrollY * 0.5;
 
   return (
-    <div className="bg-black text-white min-h-screen overflow-x-hidden relative cursor-none">
-      <CustomCursor mousePosition={mousePosition} isMenuOpen={isMenuOpen} />
+    <div className="bg-black text-white min-h-screen overflow-x-hidden relative">
       <Navigation scrollY={scrollY} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <HeroSection heroRef={heroRef} />
       <SpeakersCarousel speakers={speakers} isVisible={isVisible} />
       <AboutSection isVisible={isVisible} stats={stats} />
-      <RegisterSection isVisible={isVisible} />
+      <RegisterSection isVisible={isVisible} earlyBirdSpots={147} deadline="Aug 15, 2025" />
       <Footer />
     </div>
   );

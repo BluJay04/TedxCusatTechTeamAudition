@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'tedx-red': '#DC2626',
-        'tedx-dark': '#1F1F1F',
+        'tedx-red': '#E62B1E',
+        'tedx-dark': '#FFFFFF',
         'tedx-gray': '#2D2D2D',
       },
       fontFamily: {
