@@ -136,8 +136,13 @@ const SpeakerCarousel = ({ isVisible = { about: true } }) => {
                     {/* Slide-up Text Overlay */}
                     <div
                       className={`absolute bottom-0 left-0 w-full bg-black/90 backdrop-blur-sm text-white p-4 sm:p-5 md:p-6 rounded-b-2xl
-                        transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] will-change-transform will-change-opacity
-                        ${hoveredCard === index ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-full opacity-0 pointer-events-none'}
+                        transition-all
+                        duration-500
+                        ease-[cubic-bezier(0.4,0,0.2,1)]
+                        will-change-transform will-change-opacity
+                        ${hoveredCard === index
+                          ? 'translate-y-0 opacity-100 pointer-events-auto'
+                          : 'translate-y-full opacity-0 pointer-events-none'}
                       `}
                       style={{
                         transitionProperty: 'transform, opacity',
@@ -178,9 +183,6 @@ const SpeakerCarousel = ({ isVisible = { about: true } }) => {
 
         {/* Scroll Hint */}
         <div className={`text-center mt-8 md:mt-12 transition-all duration-1000 ${isVisible.speakers ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <p className="text-gray-500 text-xs sm:text-sm font-light">
-            Scroll horizontally to explore more speakers
-          </p>
           <div className="flex justify-center mt-2 sm:mt-4 space-x-1 sm:space-x-2">
             <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"></div>
             <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce delay-100"></div>
